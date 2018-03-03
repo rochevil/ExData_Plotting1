@@ -5,7 +5,7 @@ datafile <- "household_power_consumption.txt"
 
 if (!file.exists(datafile))
 {
-        download.file(datafilespath, datafileszip)
+        download.file(datafilespath)
 }
 
 ## Subsets the file to only get entries between 1/2/2007 and 2/2/2007
