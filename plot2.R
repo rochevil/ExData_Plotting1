@@ -18,7 +18,7 @@ data_needed <- subset(data,Date %in% c("1/2/2007","2/2/2007"))
 data_needed$Date <- as.Date(data_needed$Date,"%d/%m/%Y")
 data_needed <- cbind(data_needed, "Std_Date_Time" = as.POSIXct(paste(data_needed$Date, data_needed$Time)))
 
-## Plots 
+## Plots Global active power versus Date and Time and saves it to a PNG file
 
 png("plot2.png", width=480, height=480, bg = "transparent")
 plot(data_needed$Std_Date_Time, data_needed$Global_active_power, type = "l", xlab =" ", ylab = "Global Active power (kilowatts)")
